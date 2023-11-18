@@ -43,9 +43,11 @@ const keysCheck = document.querySelector(".keys-check input");
 
 let mapedKeys = [];
 let playing = [];
+let volume = 1;
 
 const playTune = (key) => {
     let audio = new Audio(`src/sounds/${key}.mp3`);
+    audio.volume = volume;
     audio.play();
     playing.push(key);
 
@@ -81,7 +83,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 const handleVolume = (e) => {
-    audio.volume = e.target.value;
+    volume = e.target.value;
 };
 
 volumeSlider.addEventListener("input", handleVolume);
