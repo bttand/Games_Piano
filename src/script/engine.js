@@ -8,20 +8,30 @@ function createKeys(value, box, color) {
 
 function setKeys () {
     let box = document.getElementById("key-box");
-    for (let i = 0; i < 2; i++) {
-        createKeys("a", box, "white");
-        createKeys("w", box, "black");
-        createKeys("s", box, "white");
-        createKeys("e", box, "black");
-        createKeys("d", box, "white");
-        createKeys("t", box, "white");
-        createKeys("g", box, "black");
-        createKeys("y", box, "white");
-        createKeys("h", box, "black");
-        createKeys("u", box, "white");
-        createKeys("j", box, "black");
-        createKeys("k", box, "white");           
-    }
+    createKeys("q", box, "white");
+    createKeys("2", box, "black");
+    createKeys("w", box, "white");
+    createKeys("3", box, "black");
+    createKeys("e", box, "white");
+    createKeys("r", box, "white");
+    createKeys("5", box, "black");
+    createKeys("t", box, "white");
+    createKeys("6", box, "black");
+    createKeys("y", box, "white");
+    createKeys("7", box, "black");
+    createKeys("u", box, "white");
+    createKeys("x", box, "white");
+    createKeys("d", box, "black");
+    createKeys("c", box, "white");
+    createKeys("f", box, "black");
+    createKeys("v", box, "white");
+    createKeys("b", box, "white");
+    createKeys("h", box, "black");
+    createKeys("n", box, "white");
+    createKeys("j", box, "black");
+    createKeys("m", box, "white");
+    createKeys("k", box, "black");
+    createKeys(",", box, "white");           
 }
 setKeys();
 
@@ -31,12 +41,10 @@ const volumeSlider = document.querySelector(".volume-slider input");
 
 const keysCheck = document.querySelector(".keys-check input");
 
-let audio = new Audio("src/sounds/a.wav");
-
 let mapedKeys = [];
 
 const playTune = (key) => {
-    let audio = new Audio(`src/sounds/${key}.wav`);
+    let audio = new Audio(`src/sounds/${key}.mp3`);
     audio.play();
 
     const clickedKey = document.querySelector(`[data-key="${key}"]`);

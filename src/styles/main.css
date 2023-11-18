@@ -14,7 +14,6 @@ body {
     min-height: 100vh;
     background-color: #e3f2fd;
     color: #fff;
-
 }
 
 .container {
@@ -35,7 +34,7 @@ header h2 {
     font-size: 1.6rem;
 }
 
-h5 {
+h6 {
     color: #b2b2b2;
     display: flex;
     position: absolute;
